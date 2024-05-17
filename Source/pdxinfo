@@ -1,0 +1,7 @@
+name=Paddle
+author=Graham Hall
+description=A single player Pong-like.
+bundleID=com.ghalldev.paddle
+version=0.1
+buildNumber=100
+imagePath=SystemAssets
