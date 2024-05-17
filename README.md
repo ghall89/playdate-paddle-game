@@ -4,7 +4,7 @@ A [Playdate](https://play.date/) port of a simple single-player Pong-like I wrot
 
 ## Installation
 
-1. Download the zipped game files from [releases]().
+1. Download the zipped game files from [releases](https://github.com/ghall89/playdate-paddle-game/releases/).
 2. Upload the zip file to the [Playdate website](https://play.date/account/sideload/).
 3. On your Playdate, install the game from the 'Sideloaded' section in Settings > Games
 
