@@ -2,6 +2,8 @@
 
 A [Playdate](https://play.date/) port of a simple single-player Pong-like I wrote several years ago for [PICO-8](https://en.wikipedia.org/wiki/PICO-8).
 
+![](./demo.gif)
+
 ## Installation
 
 1. Download the zipped game files from [releases](https://github.com/ghall89/playdate-paddle-game/releases/).
