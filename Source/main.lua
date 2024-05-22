@@ -17,7 +17,6 @@ assert(deathSound)
 
 -- game state
 local started = false
-local lives = 3
 local score = 0
 
 -- paddle state
@@ -50,7 +49,6 @@ function CheckCollision()
 end
 
 function SetNewGameState()
-    local paddlePosition = 150
     score = 0
     paddlePosition = 150
     ballX = 150
@@ -73,15 +71,11 @@ function playdate.update()
         gfx.fillCircleAtPoint(ballX, ballY, ballRadius)
 
         if playdate.isCrankDocked then
-            local change, acceleratedChange = playdate.getCrankChange()
+            local change, _ = playdate.getCrankChange()
             paddlePosition = paddlePosition + change
         end
 
-        local speed = 5
-
-        if btn(playdate.kButtonB) then
-            speed = 10
-        end
+        local speed = btn(playdate.kButtonB) and 10 or 5
 
         if btn(playdate.kButtonLeft) then
             paddlePosition = paddlePosition - speed
@@ -90,12 +84,7 @@ function playdate.update()
             paddlePosition = paddlePosition + speed
         end
 
-        if paddlePosition < 0 then
-            paddlePosition = 0
-        end
-        if paddlePosition > 300 then
-            paddlePosition = 300
-        end
+        paddlePosition = math.max(0, math.min(paddlePosition, 300))
 
         if ballX + ballRadius > 400 or ballX - ballRadius < 0 then
             clinkSound:play(1)
